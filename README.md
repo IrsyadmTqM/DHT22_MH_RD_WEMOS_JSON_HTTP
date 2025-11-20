@@ -45,36 +45,36 @@ Pastikan library berikut sudah terinstal:
 Lalu isi konfigurasi WiFi dan IP server di file .ino.
 
 🖥️ 2. Jalankan Server Node.js
-bash
-Copy code
+
 cd server
+
 npm init -y
+
 npm install express
+
 node server.js
+
+
 Server akan berjalan pada:
 
-arduino
-Copy code
 http://localhost:3000
-🔁 3. Endpoint API
+
+🔁 Endpoint API
 Method	Endpoint	Fungsi
 POST	/kirim_data	ESP8266 mengirim data
 GET	/ambil_data	Mengambil data terakhir
-
 📦 Contoh Data JSON dari ESP8266
-json
-Copy code
 {
   "temperature": 28.5,
   "humidity": 65,
   "rain": 1
 }
+
+
 📌 rain = 1 → Tidak hujan
 📌 rain = 0 → Hujan
 
 🚀 Contoh Response dari Server (GET /ambil_data)
-json
-Copy code
 {
   "status": "success",
   "data": {
@@ -84,18 +84,21 @@ Copy code
     "timestamp": "2025-11-20T14:30:00.000Z"
   }
 }
-⚙️ Konfigurasi WiFi & Server di ESP8266
-Ubah bagian berikut pada kode .ino:
 
-cpp
-Copy code
+⚙️ Konfigurasi WiFi & Server di ESP8266
 const char* ssid = "NAMA_WIFI";
 const char* password = "PASSWORD_WIFI";
 const char* serverUrl = "http://192.168.1.10:3000/kirim_data";
+
 🔍 Troubleshooting
 Masalah	Solusi
 Tidak konek WiFi	Cek SSID & Password
 Server error	Pastikan Node.js sudah berjalan
 Data tidak muncul	Cek IP server & endpoint
 Sensor tidak terbaca	Periksa wiring & library Arduino
+📃 License
+
+Proyek ini bersifat open-source. Bebas digunakan dan dimodifikasi.
+
+✨ Jika project ini membantu, jangan lupa ⭐ di GitHub!
 
