@@ -4,24 +4,6 @@ Project ini menggunakan **ESP8266 (Wemos D1 Mini)** untuk membaca sensor **DHT22
 
 Server Node.js menerima data tersebut dan menyimpannya sebagai _data terakhir_, serta menyediakan endpoint untuk mengambil data melalui **`GET /ambil_data`**.
 
----
-
-## 📁 Struktur Project
-
-DHT22_MH_RD_WEMOS_JSON_HTTP/
-├── esp8266/ # Kode untuk Wemos D1 Mini (Arduino)
-│ ├── DHT22_MH_RD_WEMOS_JSON_HTTP.ino
-│
-├── server/ # Kode Node.js
-│ ├── server.js
-│ ├── package.json
-│
-└── README.md
-
-yaml
-Copy code
-
----
 
 ## 🔧 Hardware yang Digunakan
 
