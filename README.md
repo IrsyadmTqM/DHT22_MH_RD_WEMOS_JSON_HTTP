@@ -43,9 +43,14 @@ Lalu isi konfigurasi WiFi dan IP server di file .ino.
 bash
 Copy code
 cd server
-npm install
+npm init -y
+npm install express
 node server.js
 Server akan berjalan pada:
+
+
+
+
 
 arduino
 Copy code
@@ -92,30 +97,7 @@ Server error	Pastikan Node.js sudah berjalan
 Data tidak muncul	Cek IP server dan endpoint
 Sensor tidak terbaca	Periksa wiring
 
-📚 Referensi
-ESP8266 WiFi Library
 
-ArduinoJson
-
-Express.js Framework
-
-Sensor DHT22 & MH-RD Datasheet
-
-🧑‍💻 Dibuat oleh
-@IrsyadmTqM – Project IoT sederhana menggunakan ESP8266 + Node.js.
-Silakan modifikasi dan kembangkan 🚀
-
-📃 License
-Proyek ini bersifat open-source. Bebas digunakan, dimodifikasi, dan dikembangkan.
-
-✨ Jika bermanfaat, jangan lupa kasih ⭐ di GitHub!
-
-yaml
-Copy code
-
----
-
-Kalau masih mau ditambah badge, gambar wiring, atau contoh grafik monitoring, tinggal bilang aja, bisa saya tambahkan langsung ke README kamu 👍
 
 
 
